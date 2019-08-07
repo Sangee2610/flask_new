@@ -1,0 +1,36 @@
+<!-- Copyright 2018 BlueCat Networks. All rights reserved. -->
+
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="css/Debian_CVE_Analysis_page.css?version={{ g.version | urlencode }}">
+{% endblock %}
+
+{% block title %}
+{{ text['title'] }}
+{% endblock %}
+
+{% block heading %}
+{{ text['title'] }}
+{% endblock %}
+
+{% block custom %}
+<div id="form">
+    <p>{{ text['info'] }}</p>
+    <!--Your page's HTML goes here.-->
+
+
+
+    {% from "form_helper.html" import render_form %}
+    {{ render_form(form) }}
+
+</div>
+<div id="output2">
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="js/Debian_CVE_Analysis_page.js?version={{ g.version | urlencode }}"></script>
+{% endblock %}
